@@ -1,0 +1,33 @@
+{
+  "name": "EFTClient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "MYSQL_PORT=3307 mocha -w 'dist/**/*.spec.js'",
+    "fix-lint": "tslint --fix -c ./tslint.json 'ts/**/*{.ts,.tsx}'",
+    "lint": "tslint ./src/**/*.ts",
+    "clean": "rm -rf dist/*",
+    "watch": "tsc --sourcemap --watch -p ./",
+    "compile": "tsc --sourcemap -p ./",
+    "example": "npm run compile && node ./dist/examples/purchase_transaction.js"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.117",
+    "@types/node": "^10.9.4",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "@types/chai": "4.0.3",
+    "@types/mocha": "^2.2.42",
+    "@types/supertest": "^2.0.4",
+    "chai": "4.1.1",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0",
+    "tslint": "^5.10.0",
+    "typescript": "2.8.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
