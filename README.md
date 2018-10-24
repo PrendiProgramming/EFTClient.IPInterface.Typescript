@@ -35,10 +35,15 @@ Requests are sent over a proprietary PC-EFTPOS TCP-based protocol. This library 
 
 Implemented Requests:
     - `client.send.transaction(transaction: Partial<EFTTransactionRequest>)` - Send a transaction to a pinpad.
+    
     - `client.send.logon(logon: Partial<EFTLogonRequest>)` - Send a logon request to the bank from the pinpad.
+    
     - `client.send.key(key: Partial<EFTSendKeyRequest>)` - Send a key press action to the pinpad.
+    
     - `client.send.setDialog(dialog: Partial<SetDialogRequest>)` - Set the EFTClient dialogue popup configuration.
+    
     - `client.send.status(status: Partial<EFTStatusRequest>)` - Send a request for information about the connected pinpad.
+    
     - `client.send.getClientList()` - Send a request for information about the connected EFTClients.
 
 ## Responses
@@ -55,11 +60,17 @@ let client = new EFTClientIP({
 
 Implemented Response types:
     - `type: IPClientResponseType.Display, interface: EFTDisplayResponse`
+    
     - `type: IPClientResponseType.Receipt, interface: EFTReceiptResponse`
+    
     - `type: IPClientResponseType.Logon, interface: EFTLogonResponse`
+    
     - `type: IPClientResponseType.Transaction, interface: EFTTransactionResponse`
+    
     - `type: IPClientResponseType.SetDialog, interface: SetDialogResponse`
+    
     - `type: IPClientResponseType.Status, interface: SetStatusResponse`
+    
     - `type: 'Not Implemented', interface: {response: any} // emits messages that did not match one of the above types.`
 
 ## Want to contribute
